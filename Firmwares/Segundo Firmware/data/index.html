@@ -8,31 +8,32 @@
   <script src="https://kit.fontawesome.com/a2e0e6adcb.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class="navbar">
+  <!-- Barra superior -->
+  <header class="navbar">
     <div class="nav-left">
-      <img 
-        src="https://electronicagambino.com/wp-content/uploads/2023/05/cropped-Electronica-Gambino-e1684335474114.png" 
-        alt="Logo" class="logo">
+      <img src="https://electronicagambino.com/wp-content/uploads/2023/05/cropped-Electronica-Gambino-e1684335474114.png" alt="Logo" class="logo">
       <span class="title">Panel IoT - ESP32 DHT22</span>
     </div>
-    <div class="toggle-container">
-      <input type="checkbox" id="theme-toggle" />
-      <label for="theme-toggle" class="toggle">
-        <i class="fas fa-moon"></i>
+
+    <div class="theme-toggle">
+      <input type="checkbox" id="darkmode-toggle" />
+      <label for="darkmode-toggle" class="toggle-label">
         <i class="fas fa-sun"></i>
-        <span class="slider"></span>
+        <i class="fas fa-moon"></i>
+        <span class="ball"></span>
       </label>
     </div>
-  </nav>
+  </header>
 
-  <main class="main">
-    <div class="card temperature">
+  <!-- Contenido principal -->
+  <main class="container">
+    <div class="card">
       <i class="fas fa-thermometer-half icon"></i>
       <h2>Temperatura</h2>
       <p id="tempValue">-- °C</p>
     </div>
 
-    <div class="card humidity">
+    <div class="card">
       <i class="fas fa-tint icon"></i>
       <h2>Humedad</h2>
       <p id="humValue">-- %</p>

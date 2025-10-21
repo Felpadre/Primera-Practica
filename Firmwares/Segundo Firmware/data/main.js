@@ -1,6 +1,6 @@
 const tempValue = document.getElementById("tempValue");
 const humValue = document.getElementById("humValue");
-const toggle = document.getElementById("theme-toggle");
+const toggle = document.getElementById("darkmode-toggle");
 
 // === Aplicar tema guardado ===
 const savedTheme = localStorage.getItem("theme");
@@ -26,7 +26,7 @@ if (savedData) {
 // === Obtener datos del ESP32 ===
 async function getSensorData() {
   try {
-    // ⚠️ Cambia la IP por la del ESP32
+    // ⚠️ Cambia la IP por la de tu ESP32
     const response = await fetch("http://192.168.0.150/data");
     const data = await response.json();
 
@@ -35,7 +35,7 @@ async function getSensorData() {
 
     localStorage.setItem("sensorData", JSON.stringify(data));
   } catch (error) {
-    console.warn("Error al obtener datos del ESP32, mostrando últimos guardados.");
+    console.warn("Error al obtener datos del ESP32, usando últimos guardados.");
   }
 }
 

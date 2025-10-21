@@ -3,40 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Panel IoT - DHT22</title>
+  <title>Panel IoT - DHT22 (Simulado)</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="nav-left">
-      <img src="https://electronicagambino.com/wp-content/uploads/2023/05/cropped-Electronica-Gambino-e1684335474114.png" alt="Logo" class="logo">
-      <h1>Panel IoT - ESP32 DHT22</h1>
-    </div>
-    <div class="theme-toggle">
-      <input type="checkbox" id="toggle-theme">
-      <label for="toggle-theme" class="toggle-label">
-        <i class="fas fa-moon"></i>
-        <i class="fas fa-sun"></i>
-        <span class="ball"></span>
+  <div class="container">
+    <header>
+      <h1>Panel IoT - DHT22</h1>
+
+      <!-- Toggle de modo oscuro -->
+      <label class="switch">
+        <input type="checkbox" id="themeToggle" />
+        <span class="slider">
+          <i class="icon sun">☀️</i>
+          <i class="icon moon">🌙</i>
+        </span>
       </label>
-    </div>
-  </nav>
+    </header>
 
-  <!-- Contenido principal -->
-  <main class="container">
-    <div class="card">
-      <h2>Temperatura</h2>
-      <p id="tempValue">-- °C</p>
-    </div>
-    <div class="card">
-      <h2>Humedad</h2>
-      <p id="humValue">-- %</p>
-    </div>
-  </main>
+    <main>
+      <div class="card">
+        <h2>Temperatura</h2>
+        <p id="tempValue">-- °C</p>
+      </div>
 
-  <!-- Scripts -->
-  <script src="https://kit.fontawesome.com/a2e0e6adcb.js" crossorigin="anonymous"></script>
+      <div class="card">
+        <h2>Humedad</h2>
+        <p id="humValue">-- %</p>
+      </div>
+    </main>
+
+    <footer>
+      <p>Simulación en tiempo real | GPIO 2 - ESP32 (Simulado)</p>
+    </footer>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>

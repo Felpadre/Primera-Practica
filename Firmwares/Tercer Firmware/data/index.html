@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel IoT - DHT22</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Panel IoT - DHT22</h1>
+      <label class="switch">
+        <input type="checkbox" id="theme-toggle">
+        <span class="slider"></span>
+      </label>
+    </header>
+
+    <main>
+      <div class="card">
+        <h2>Temperatura</h2>
+        <p id="temp">-- °C</p>
+      </div>
+
+      <div class="card">
+        <h2>Humedad</h2>
+        <p id="hum">-- %</p>
+      </div>
+    </main>
+
+    <footer>
+      Simulación en tiempo real | GPIO 2 - ESP32 (DHT22)
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
